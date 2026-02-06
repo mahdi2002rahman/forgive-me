@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- iPhone / iOS compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>For Deepika ❤️</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            width: 92%;
+            max-width: 420px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 18px 0;
+            color: #333;
+        }
+
+        button {
+            min-width: 120px;
+            padding: 14px 26px;
+            font-size: 17px;
+            margin: 10px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background: #e63946;
+            color: white;
+        }
+
+        .no {
+            background: #d3d3d3;
+            color: #333;
+        }
+
+        .apology {
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="box">
+    <h1>Deepika ❤️</h1>
+
+    <p>
+        Deepika, I’ve done a lot of bad things and I am willing to change everything for you,
+        could you please give me another chance?
+    </p>
+
+    <div id="buttons">
+        <button class="yes" onclick="sayYes()">Yes</button>
+        <button class="no" onclick="sayNo()">No</button>
+    </div>
+
+    <div class="apology" id="apology"></div>
+</div>
+
+<script>
+    let noCount = 0;
+
+    const apologies = [
+        "Please… 😞",
+        "I beg you…",
+        "I am trying to change…",
+        "Just one chance…",
+        "In the name of Allah, just forgive me please…",
+        "I swear I’m becoming better for you…",
+        "I can’t imagine my life without you…",
+        "Please don’t give up on me…",
+        "I’ll spend my whole life making this right…",
+        "I promise I’ll never hurt you again…"
+    ];
+
+    function sayNo() {
+        noCount++;
+        document.getElementById("apology").innerText =
+            apologies[noCount % apologies.length];
+    }
+
+    function sayYes() {
+        document.getElementById("box").innerHTML = `
+            <h1>❤️</h1>
+            <p style="font-size:22px;">
+                I love you a lot and I will never make you regret your decisions ever again ❤️
+            </p>
+        `;
+    }
+</script>
+
+</body>
+</html>
